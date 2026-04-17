@@ -1,5 +1,6 @@
 package p01;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Practice2 {
@@ -14,7 +15,7 @@ public class Practice2 {
         Mastermind game = new Mastermind(size);
 
         // DEBUG: show code
-//        System.out.println("答え（デバッグ用）: " + Arrays.toString(game.getCode()));
+        System.out.println("答え（デバッグ用）: " + Arrays.toString(game.getCode()));
 
         while (true) {
             System.out.print("入力: ");
