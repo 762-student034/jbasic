@@ -62,5 +62,4 @@ public class Cat {
 		return favFood;
 	}
 
-
 }

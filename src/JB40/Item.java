@@ -1,0 +1,49 @@
+package JB40;
+
+public class Item {
+	private String name;
+	private int price;
+
+	public Item() {
+		name = "";
+		price = 0;
+	}
+
+	public Item(String name, int price) {
+		this.name = name;
+		this.price = price;
+	}
+
+	//---Getter---
+	public int getPrice() {
+		return price;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	//---Setter---
+	public int setPrice(int price) {
+		this.price = price;
+		return this.price;
+	}
+
+	public String setName(String name) {
+		this.name = name;
+		return this.name;
+	}
+
+	//---Methods---
+	public void showInfo() {
+		String name = this.getName();
+		int price = this.getPrice();
+		Double priceCalc = price * 1.1;
+		int priceWithTax = (int) Math.round(priceCalc);
+		System.out.println("名前： " + name);
+		System.out.println("価格(税抜き)： " + price);
+		System.out.println("価格(税込み)： " +priceWithTax);
+
+	}
+
+}
