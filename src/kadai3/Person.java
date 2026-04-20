@@ -36,7 +36,7 @@ public class Person {
 	public static boolean hasAgeError(int age) {
 		if (age < 0 || age > 130) {
 			System.out.println("年齢は0以上130以下で入力してください。");
-		return false;
+			return false;
 		}
 		return true;
 	}

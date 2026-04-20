@@ -9,29 +9,17 @@ public class Member {
 		this.isPremium = false;
 	}
 
-	public static int getPoints(int price, boolean isPrem) {
-		double ptDbl = 0;
-		int pt = 0;
-		if (isPrem) {
-			ptDbl = price * 0.2;
-			pt = (int) ptDbl;
-		} else if (!isPrem) {
-			ptDbl = price * 0.1;
-			pt = (int) ptDbl;
-		}
-		return pt;
+	public static double getPoints(int price, boolean isPrem) {
+		double rate = isPrem ? 0.2 : 0.1;
+		return price * rate;
 	}
 
 	public static int getPoints(int price, int isPrem) {
-		double ptDbl = 0;
-		int pt = 0;
-		if (isPrem - 1 == 0) {
-			ptDbl = price * 0.1;
-			pt = (int) ptDbl;
-		} else if (isPrem - 1 == 1) {
-			ptDbl = price * 0.2;
-			pt = (int) ptDbl;
+		if (isPrem == 0) {
+			return (int) (price * 0.2);
+		} else if (isPrem == 1) {
+			return (int) (price * 0.1);
 		}
-		return pt;
+		return 0;
 	}
 }

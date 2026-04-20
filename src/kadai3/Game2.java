@@ -38,7 +38,7 @@ public class Game2 {
             int hits = result[0];
             int near = result[1];
 
-            System.out.println("ヒット: " + hits + " / ニア: " + near);
+            System.out.println("ヒット: " + hits + " / ブロー: " + near);
 
             if (hits == size) {
                 System.out.println("正解です！おめでとう！");

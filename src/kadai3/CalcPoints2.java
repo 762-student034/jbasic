@@ -11,12 +11,13 @@ public class CalcPoints2 {
 		System.out.println("1:プレミア会員, 2:無料会員");
 		System.out.print("会員ランク：");
 		int rank = scan.nextInt();
+		rank -= rank;
 
-		if (rank == 1) {
+		if (rank == 0) {
 			// 無料会員のポイント計算
 			int p1 = Member.getPoints(price, rank);
 			System.out.println("無料会員には" + p1 + "ポイント付与されます");
-		} else if (rank == 2) {
+		} else if (rank == 1) {
 			int p2 = Member.getPoints(price, rank);
 			System.out.println("プレミア会員には" + p2 + "ポイント付与されます");
 		}
