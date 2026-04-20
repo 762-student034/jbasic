@@ -1,16 +1,16 @@
-package kadai;
+package kadai2;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class CheckString5 {
+public class CheckString4 {
 
 	public static void main(String[] args) {
 
 		Scanner scan = new Scanner(System.in);
 
 		while (true) {
-			System.out.println("繰り返す回数を入力してください: ");
+			System.out.println("文字列の個数を入力してください:  ");
 			int noOfTimes = 0;
 
 			try {
@@ -28,15 +28,19 @@ public class CheckString5 {
 	}
 
 	public static void loop(int times) {
-		String result = "";
-		String input = "";
+		String[] result = new String[times];
+		int longest = 0;
+		String longestStr = "";
 		Scanner scan = new Scanner(System.in);
 
 		for (int i = 0; i < times; i++) {
 			System.out.println((i + 1) + "つめの文字列を入力してください: ");
-			input = scan.nextLine();
-			result += input;
+			result[i] = scan.nextLine();
+			if (longest < result[i].length()) {
+				longest = result[i].length();
+				longestStr = result[i];
+			}
 		}
-		System.out.println(result);
+		System.out.println("最も長い文字列は「"+longestStr+"」です。");
 	}
 }

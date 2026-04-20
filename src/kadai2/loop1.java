@@ -1,4 +1,4 @@
-package kadai;
+package kadai2;
 
 public class loop1 {
 

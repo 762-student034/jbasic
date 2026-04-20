@@ -1,4 +1,4 @@
-package JB40;
+package kadai4;
 
 public class UserAction1 {
 

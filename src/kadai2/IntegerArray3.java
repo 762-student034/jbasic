@@ -1,12 +1,9 @@
-package kadai;
+package kadai2;
 
-public class IntegerArray1 {
+public class IntegerArray3 {
 
 	public static void main(String[] args) {
-		
-		loop(populateArray());
-		
-		
+		loop(populateArray());	
 	}
 	
 	public static int[] populateArray() {
@@ -15,8 +12,12 @@ public class IntegerArray1 {
 	}
 	
 	public static void loop(int arr[]) {
+		int count = 0;
 		for (int i = 0; i < arr.length; i++) {
-				System.out.println(arr[i]);
+			if (arr[i]==7) {
+				count++;
+			}
 		}
+		System.out.println(count+"個ありました。");
 	}
 }

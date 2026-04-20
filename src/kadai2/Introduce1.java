@@ -1,6 +1,6 @@
-package kadai;
+package kadai2;
 
-public class IntegerArray2 {
+public class Introduce1 {
 
 	public static void main(String[] args) {
 		

@@ -1,8 +1,8 @@
-package kadai;
+package kadai2;
 
 import java.util.Scanner;
 
-public class CheckString4 {
+public class CheckString1 {
 
 	public static void main(String[] args) {
 		
