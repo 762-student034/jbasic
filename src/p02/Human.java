@@ -4,6 +4,8 @@ public class Human {
     private String name;
     private int age;
 
+    // ---Constructor---
+    
     public Human() {
         this.name = "Unknown";
         this.age = 0;
@@ -35,6 +37,10 @@ public class Human {
     public void introduce() {
         System.out.println("名前は" + this.name);
         System.out.println("年齢は" + this.age);
+    }
+    
+    public void introduce(String input) {
+    	System.out.println(input);
     }
 
     public void eat() {
