@@ -7,10 +7,12 @@ public class Game1 {
 
 	public static void main(String[] args) {
 		Random rand = new Random();
+		
 		int answer = rand.nextInt(100);
+		int times = 0;
+		
 		System.out.println("デバッグ用: " + answer);
 		Scanner scan = new Scanner(System.in);
-		int times = 0;
 		while (true) {
 			System.out.println("数字を入力してください：");
 			int input = scan.nextInt();
