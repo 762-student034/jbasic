@@ -1,5 +1,7 @@
 package p04;
 
+
+
 public class Human {
 	private String name;
 	private int age;
@@ -38,5 +40,6 @@ public class Human {
         System.out.println("名前は" + this.name);
         System.out.println("年齢は" + this.age);
     }
-
+	
 }
+

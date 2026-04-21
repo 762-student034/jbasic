@@ -1,5 +1,7 @@
 package p04;
 
+
+
 public class Tanaka extends Human {
 	private String bucho;
 	private String company;
@@ -39,3 +41,14 @@ public class Tanaka extends Human {
 		System.out.println("配属は" + getCompany());
 	}
 }
+
+
+
+
+//class Yamada extends Tanaka implements yamada {	
+//	@Override
+//	public void introduce(){
+//		System.out.println("山田は田中ではない。");
+//	}
+//	
+//}
