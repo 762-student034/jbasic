@@ -1,4 +1,4 @@
-package p04;
+package p05;
 
 public class Human {
 	private String name;
@@ -16,7 +16,7 @@ public class Human {
 		this.age = age;
 	}
 
-	// ---Getters ---
+	// --- Proper Getters ---
 	public String getName() {
 		return name;
 	}
@@ -25,7 +25,7 @@ public class Human {
 		return age;
 	}
 
-	// ---Setters ---
+	// --- Proper Setters ---
 	public void setName(String name) {
 		this.name = name;
 	}
@@ -34,9 +34,16 @@ public class Human {
 		this.age = age;
 	}
 
-	public void introduce() {
-        System.out.println("名前は" + this.name);
-        System.out.println("年齢は" + this.age);
-    }
+	public void eat() {
+		System.out.println("何もくれなかったよ！\n自腹で食べるよ！\n");
+	}
+
+	public void eat(String bento) {
+		System.out.println(bento + "をもらったよ。\nそれを食べるよ！\n");
+	}
+
+	public void eat(int money) {
+		System.out.println(money + "円もらったよ。\n寿司屋に行くよ！\n");
+	}
 
 }
