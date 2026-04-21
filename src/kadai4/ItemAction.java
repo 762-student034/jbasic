@@ -16,7 +16,7 @@ public class ItemAction {
 		int price = item1.getPrice();
 
 		System.out.println("名前： " + name);
-		System.out.println("価格： " + price);
+		System.out.println("価格： " + price+"円");
 
 		
 		//Step2の処理

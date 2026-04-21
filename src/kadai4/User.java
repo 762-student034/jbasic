@@ -35,10 +35,7 @@ public class User {
 
 	// 情報を出力するshowInfo()メソッド
 	public void showInfo() {
-		String storedName = getName();
-		int storedAge = getAge();
-		System.out.println("名前: " + storedName + "\n年齢: " + storedAge);
-
+		System.out.println("名前: " + getName() + "\n年齢: " + getAge());
 	}
 
 }

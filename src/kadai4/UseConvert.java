@@ -14,7 +14,7 @@ public class UseConvert {
                 break;
             } catch (Exception e) {
                 System.out.println("整数を入力してください。");
-                scan.nextLine();
+                scan.nextInt();
             }
         }
         Convert.reverse(input1);
@@ -27,7 +27,7 @@ public class UseConvert {
                 break;
             } catch (Exception e) {
                 System.out.println("浮動小数点数を入力してください。");
-                scan.nextLine();
+                scan.nextDouble();
             }
         }
         Convert.reverse(input2);
@@ -35,7 +35,7 @@ public class UseConvert {
         String input3;
         while (true) {
             System.out.print("文字列を入力して下さい：");
-            input3 = scan.next();
+            input3 = scan.nextLine();
             if (Convert.verify(input3)) {
                 break;
             } else {

@@ -38,13 +38,13 @@ public class Item {
 	//---Methods---
 	// 情報出力用showInfo()メソッド
 	public void showInfo() {
-		String name = this.getName();
-		int price = this.getPrice();
+		String name = getName();
+		int price = getPrice();
 		Double priceCalc = price * 1.1;
 		int priceWithTax = (int) Math.round(priceCalc);
 		System.out.println("名前： " + name);
-		System.out.println("価格(税抜き)： " + price);
-		System.out.println("価格(税込み)： " +priceWithTax);
+		System.out.println("価格(税抜き)： " + price + "円");
+		System.out.println("価格(税込み)： " + priceWithTax + "円");
 	}
 
 }
