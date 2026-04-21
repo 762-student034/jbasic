@@ -22,7 +22,7 @@ public class UseCustomer {
 					break; 
 				} catch (Exception e) {
 					System.out.println("整数を入力してください。");
-					scan.nextLine(); 
+					scan.nextInt(); 
 				}
 			}
 
