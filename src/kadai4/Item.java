@@ -1,6 +1,7 @@
 package kadai4;
 
 public class Item {
+	// フィールド（名前と価格を定義する）
 	private String name;
 	private int price;
 
@@ -35,6 +36,7 @@ public class Item {
 	}
 
 	//---Methods---
+	// 情報出力用showInfo()メソッド
 	public void showInfo() {
 		String name = this.getName();
 		int price = this.getPrice();
@@ -43,7 +45,6 @@ public class Item {
 		System.out.println("名前： " + name);
 		System.out.println("価格(税抜き)： " + price);
 		System.out.println("価格(税込み)： " +priceWithTax);
-
 	}
 
 }

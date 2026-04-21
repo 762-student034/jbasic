@@ -3,23 +3,47 @@ package kadai4;
 import java.util.Scanner;
 
 public class UseConvert {
-	public static void main(String[] args) {
-		Scanner scan = new Scanner(System.in);
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
 
-		// 入力した整数を反転させる
-		System.out.print("整数を入力して下さい：");
-		int input1 = scan.nextInt();
-		Convert.reverse(input1);
+        int input1;
+        while (true) {
+            System.out.print("整数を入力して下さい：");
+            try {
+                input1 = scan.nextInt();
+                break;
+            } catch (Exception e) {
+                System.out.println("整数を入力してください。");
+                scan.nextLine();
+            }
+        }
+        Convert.reverse(input1);
 
-		// 入力した浮動小数点数を反転させる
-		System.out.print("浮動小数点数を入力して下さい：");
-		double input2 = scan.nextDouble();
-		Convert.reverse(input2);
+        double input2;
+        while (true) {
+            System.out.print("浮動小数点数を入力して下さい：");
+            try {
+                input2 = scan.nextDouble();
+                break;
+            } catch (Exception e) {
+                System.out.println("浮動小数点数を入力してください。");
+                scan.nextLine();
+            }
+        }
+        Convert.reverse(input2);
 
-		// 入力した文字列を反転させる
-		System.out.print("文字列を入力して下さい：");
-		String input3 = scan.next();
-		Convert.reverse(input3);
-		scan.close();
-	}
+        String input3;
+        while (true) {
+            System.out.print("文字列を入力して下さい：");
+            input3 = scan.next();
+            if (Convert.verify(input3)) {
+                break;
+            } else {
+                System.out.println("文字列が不正です。再入力してください。");
+            }
+        }
+        Convert.reverse(input3);
+
+        scan.close();
+    }
 }

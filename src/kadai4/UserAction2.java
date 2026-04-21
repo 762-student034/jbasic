@@ -9,6 +9,8 @@ public class UserAction2 {
 		
 		// Userオブジェクトを生成し変数userに代入する
 		User user = new User();
+		
+		// キーボードから名前と年齢を取得しuserにセットする
 		System.out.println("名前: ");
 		String name = scan.nextLine();
 		System.out.println("年齢: ");

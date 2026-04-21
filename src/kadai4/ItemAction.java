@@ -4,15 +4,21 @@ public class ItemAction {
 
 	public static void main(String[] args) {
 		// TODO 自動生成されたメソッド・スタブ
-		Item item = new Item();
-		item.setName("絵本");
-		item.setPrice(1000);
-		String name = item.getName();
-		int price = item.getPrice();
+		// Itemクラスのオブジェクトを生成し変数item1に代入する
+		Item item1 = new Item();
+		
+		// item1のフィールドに商品名「絵本」、価格「1000」を設定する
+		item1.setName("絵本");
+		item1.setPrice(1000);
+		
+		// item1を利用して商品名と価格の情報を出力する
+		String name = item1.getName();
+		int price = item1.getPrice();
 
 		System.out.println("名前： " + name);
 		System.out.println("価格： " + price);
 
+		
 		//Step2の処理
 		System.out.println("---");
 
