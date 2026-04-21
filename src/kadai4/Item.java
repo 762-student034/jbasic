@@ -25,14 +25,12 @@ public class Item {
 	}
 
 	//---Setter---
-	public int setPrice(int price) {
+	public void setPrice(int price) {
 		this.price = price;
-		return this.price;
 	}
 
-	public String setName(String name) {
+	public void setName(String name) {
 		this.name = name;
-		return this.name;
 	}
 
 	//---Methods---

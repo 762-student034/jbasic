@@ -15,14 +15,12 @@ public class User {
 		this.age = age;
 	}
 
-	public String setName(String name) {
+	public void setName(String name) {
 		this.name = name;
-		return this.name;
 	}
 
-	public int setAge(int age) {
+	public void setAge(int age) {
 		this.age = age;
-		return this.age;
 	}
 
 	public String getName() {

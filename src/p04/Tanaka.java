@@ -16,14 +16,12 @@ public class Tanaka extends Human {
 		this.company = company;
 	}
 
-	public String setBucho(String bucho) {
+	public void setBucho(String bucho) {
 		this.bucho = bucho;
-		return this.bucho;
 	}
 
-	public String setCompany(String company) {
+	public void setCompany(String company) {
 		this.company = company;
-		return this.company;
 	}
 
 	public String getBucho() {
