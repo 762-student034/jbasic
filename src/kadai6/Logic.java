@@ -48,7 +48,7 @@ public class Logic {
 			if (i instanceof Warrior w) {
 				w.attack();
 			} else if (i instanceof Healer) {
-				break;
+				continue;
 			} else if (i instanceof Monk m) {
 				m.attack();
 			}
@@ -59,7 +59,7 @@ public class Logic {
 	public static void Heal(Character[] ptList) {
 		for (Character i : ptList) {
 			if (i instanceof Warrior) {
-				break;
+				continue;
 			} else if (i instanceof Healer h) {
 				h.heal();
 			} else if (i instanceof Monk m) {
