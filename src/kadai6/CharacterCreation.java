@@ -16,9 +16,9 @@ public class CharacterCreation {
 			String name = scan.nextLine();
 			
 			switch(selection) {
-			case 1: ptList[i] = new Warrior(name);
-			case 2: ptList[i] = new Healer(name);
-			case 3: ptList[i] = new Monk(name);
+			case 1: ptList[i] = new Warrior(name); break;
+			case 2: ptList[i] = new Healer(name); break;
+			case 3: ptList[i] = new Monk(name); break;
 			}
 		}
 		System.out.println("===パーティーを作成しました===");
