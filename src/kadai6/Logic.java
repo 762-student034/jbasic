@@ -1,14 +1,11 @@
 package kadai6;
 
-import java.util.Scanner;
-
 public class Logic {
 
-	public static void operate(Character[] ptList) {
-		Scanner scan = new Scanner(System.in);
+	public static void operate(Character[] ptList, int input) {
 
 		System.out.println("操作（1:一覧表示 2:攻撃 3:回復 9:終了）を選択してください：");
-		int input = scan.nextInt();
+
 
 		switch (input) {
 		case 1:
