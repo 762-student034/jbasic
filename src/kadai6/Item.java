@@ -1,11 +1,14 @@
 package kadai6;
 
 public class Item {
-	private String name;
-	private int price;
+	private String name; //商品名
+	private int price; //価格
+	
+	//---ゲッター、セッター---
 	public String getName() {
 		return name;
 	}
+	
 	public void setName(String name) {
 		this.name = name;
 	}
@@ -26,6 +29,7 @@ public class Item {
 		this.price = price;
 	}
 	
+	//情報を表示
 	public void showInfo() {
 		System.out.println("商品名: "+getName());
 		System.out.println("価格: "+getPrice()+"円");

@@ -9,7 +9,6 @@ public class Warrior extends Character implements Attackable{
 		super(name);
 	}
 	
-	
 	@Override
 	public void info(){
 		System.out.println("戦士: "+getName());

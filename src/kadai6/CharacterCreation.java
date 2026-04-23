@@ -10,7 +10,7 @@ public class CharacterCreation {
 		String name;
 		for (int i = 0; i<ptList.length; i++) {
 			System.out.println("どちら(1:戦士 2:ヒーラー 3:僧侶)を作成しますか: ");
-			selection = Logic.getValidatedInput(scan);
+			selection = ValidateInput.getValidatedInput(scan);
 			scan.nextLine();
 			System.out.println("名前: ");
 			name = scan.nextLine();
