@@ -1,4 +1,4 @@
-package kadai6;
+package kadai6.dqmodoki;
 
 public class Warrior extends Character implements Attackable{
 	public Warrior() {
