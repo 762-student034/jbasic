@@ -16,5 +16,7 @@ public abstract class Character {
 	}
 	
 	public abstract void info();
+	public void attack() {}
+    public void heal() {}
 
 }
