@@ -7,148 +7,148 @@ import InputVerify.ValidateInput;
 
 public class Operations {
 
-	public static List<Item> addItem(List<Item> list, Scanner sc) { //商品追加
+    // 商品追加
+    public static List<Item> addItem(List<Item> list, Scanner sc) {
+        System.out.println("商品をカートに追加します");
 
-		System.out.println("商品をカートに追加します");
+        System.out.print("  商品名を入力してください：");
+        String name = sc.nextLine();
 
-		System.out.println("  商品名を入力してください：");
-		String name = sc.nextLine();
+        System.out.print("  価格を入力してください：");
+        int price = ValidateInput.verifyRange(sc);
 
-		System.out.println("  価格を入力してください：");
-		int price = ValidateInput.verifyRange(sc);
+        list.add(new Item(name, price));
+        showItemList(list);
+        return list;
+    }
 
-		Item i = new Item(name, price);
-		list.add(i);
-		showItemList(list);
-		return list;
-	}
+    // 書籍追加
+    public static List<Item> addBook(List<Item> list, Scanner sc) {
+        System.out.println("書籍をカートに追加します");
 
-	public static List<Item> addBook(List<Item> list, Scanner sc) { //書籍追加
+        System.out.print("  書籍名を入力してください：");
+        String name = sc.nextLine();
 
-		System.out.println("書籍をカートに追加します");
+        System.out.print("  著者を入力してください：");
+        String author = sc.nextLine();
 
-		System.out.println("  書籍名を入力してください：");
-		String name = sc.nextLine();
+        System.out.print("  価格を入力してください：");
+        int price = ValidateInput.verifyRange(sc);
 
-		System.out.println("  著者を入力してください：");
-		String author = sc.nextLine();
+        list.add(new Book(name, price, author));
+        showItemList(list);
+        return list;
+    }
 
-		System.out.println("  価格を入力してください：");
-		int price = ValidateInput.verifyRange(sc);
+    // 商品更新
+    public static void updateItem(List<Item> list, Scanner sc) {
+        System.out.println("情報を更新します");
 
-		Book i = new Book(name, price, author);
-		list.add(i);
-		showItemList(list);
-		return list;
-	}
+        if (list.isEmpty()) {
+            System.out.println("カートは空です。更新できません。\n");
+            return;
+        }
 
-	public static void updateItem(List<Item> list, Scanner sc) { //更新
-		System.out.println("情報を更新します");
-		if (list.isEmpty()) {
-			System.out.println("カートは空です。更新できません。");
-		} else {
-			try {
-				System.out.println("No.を入力してください。");
-				int index = ValidateInput.verifyInt(sc);
-				Item i = list.get(index - 1);
-				if (i instanceof Book) {
-					System.out.println("  新書籍名を入力してください（現在：" + i.getName() + "): ");
-					i.setName(sc.nextLine());
+        System.out.print("No.を入力してください：");
+        int index = ValidateInput.verifyInt(sc) - 1;
 
-					System.out.println("  新著者を入力してください（現在：" + ((Book) i).getAuthor() + "): ");
-					((Book) i).setAuthor(sc.nextLine());
+        if (index < 0 || index >= list.size()) {
+            System.out.println("商品は存在しません。\n");
+            return;
+        }
 
-					System.out.println("  新価格を入力してください（現在：" + i.getPrice() + "): ");
-					i.setPrice(ValidateInput.verifyInt(sc));
+        Item item = list.get(index);
 
-					System.out.println("  書籍更新しました。");
-					showItemList(list);
-				} else {
-					System.out.println("  新商品名を入力してください（現在：" + i.getName() + "): ");
-					i.setName(sc.nextLine());
+        System.out.print("  新商品名を入力してください（現在：" + item.getName() + "）：");
+        item.setName(sc.nextLine());
 
-					System.out.println("  新価格を入力してください（現在：" + i.getPrice() + "): ");
-					i.setPrice(ValidateInput.verifyInt(sc));
+        if (item instanceof Book book) {
+            System.out.print("  新著者を入力してください（現在：" + book.getAuthor() + "）：");
+            book.setAuthor(sc.nextLine());
+        }
 
-					System.out.println("商品更新しました。");
-					showItemList(list);
-				}
-			} catch (IndexOutOfBoundsException e) {
-				System.out.println("商品は存在しません。");
-			}
-		}
-	}
+        System.out.print("  新価格を入力してください（現在：" + item.getPrice() + "）：");
+        item.setPrice(ValidateInput.verifyInt(sc));
 
-	public static void deleteItem(List<Item> list, Scanner sc) { //削除
-		System.out.println("カートから削除します");
-		if (list.isEmpty()) {
-			System.out.println("カートは空です。削除できません。");
+        System.out.println("商品を更新しました。\n");
+        showItemList(list);
+    }
 
-		} else {
-			try {
-				System.out.println("  No.を入力してください： ");
-				int index = ValidateInput.verifyInt(sc);
-				list.remove(index - 1);
-				System.out.println("カートから削除しました");
-			} catch (IndexOutOfBoundsException e) {
-				System.out.println("商品は存在しません。");
-			}
-		}
+    // 商品削除
+    public static void deleteItem(List<Item> list, Scanner sc) {
+        System.out.println("カートから削除します");
 
-	}
+        if (list.isEmpty()) {
+            System.out.println("カートは空です。削除できません。\n");
+            return;
+        }
 
-	public static void search(List<Item> iList, Scanner sc) { //商品検索
-		System.out.println("カートを検索します");
-		System.out.println("  検索キーワードを入力してください：");
-		String kw = sc.nextLine();
-		int hit = 0;
-		System.out.println("商品情報");
-		System.out.println("-------------------------");
-		for (Item i : iList) {
-			if (i.getName().toLowerCase().contains(kw.toLowerCase())) { //大小文字を問わず検索できる
-				System.out.println(i.getInfo());
-				hit++;
-			} else {
-				break;
-			}
-		}
-		System.out.println("-------------------------");
-		if (hit != 0) {
-			System.out.println(hit + "件の商品見つかりました。");
-			System.out.println("");
-		} else {
-			System.out.println("商品見つかりませんでした。");
-			System.out.println("");
-		}
-	}
+        System.out.print("No.を入力してください：");
+        int index = ValidateInput.verifyInt(sc) - 1;
 
-	public static void buy(List<Item> iList, Scanner sc) { //商品一覧
-		System.out.println("購入します。");
-		int price = 0;
-		if (iList.isEmpty()) {
-			System.out.println("カートは空です。購入できません。");
-			System.out.println("");
-		} else {
-			for (Item i : iList) {
-				price += i.getPrice();
-			}
-			System.out.println("   ＊＊＊合計金額は" + price + "円です。");
-			System.out.println("");
+        if (index < 0 || index >= list.size()) {
+            System.out.println("商品は存在しません。\n");
+            return;
+        }
 
-			iList.removeAll(iList);
-			showItemList(iList);
-		}
-	}
+        list.remove(index);
+        System.out.println("カートから削除しました。\n");
+        showItemList(list);
+    }
 
-	public static void showItemList(List<Item> iList) { //商品一覧
-		System.out.println("No.    商品情報");
-		System.out.println("-------------------------");
-		for (int idx = 0; idx < iList.size(); idx++) {
-			Item i = iList.get(idx);
-			System.out.println(idx + 1 + "      " + i.getInfo());
-		}
-		System.out.println("-------------------------");
-		System.out.println("");
-	}
+    // 商品検索
+    public static void search(List<Item> list, Scanner sc) {
+        System.out.println("カートを検索します");
+        System.out.print("  検索キーワードを入力してください：");
+        String kw = sc.nextLine().toLowerCase();
 
+        int hit = 0;
+
+        System.out.println("商品情報");
+        System.out.println("-------------------------");
+
+        for (Item i : list) {
+            if (i.getName().toLowerCase().contains(kw)) {
+                System.out.println(i.getInfo());
+                hit++;
+            }
+        }
+
+        System.out.println("-------------------------");
+
+        if (hit > 0) {
+            System.out.println(hit + "件の商品が見つかりました。\n");
+        } else {
+            System.out.println("商品が見つかりませんでした。\n");
+        }
+    }
+
+    // 購入処理
+    public static void buy(List<Item> list, Scanner sc) {
+        System.out.println("購入します。");
+
+        if (list.isEmpty()) {
+            System.out.println("カートは空です。購入できません。\n");
+            return;
+        }
+
+        int total = list.stream().mapToInt(Item::getPrice).sum();
+
+        System.out.println("＊＊＊合計金額は " + total + " 円です。\n");
+
+        list.clear();
+        showItemList(list);
+    }
+
+    // 商品一覧表示
+    public static void showItemList(List<Item> list) {
+        System.out.println("No.    商品情報");
+        System.out.println("-------------------------");
+
+        for (int i = 0; i < list.size(); i++) {
+            System.out.println((i + 1) + "      " + list.get(i).getInfo());
+        }
+
+        System.out.println("-------------------------\n");
+    }
 }
