@@ -3,7 +3,7 @@ package kadai2;
 public class IntegerArray3 {
 
 	public static void main(String[] args) {
-		loop(populateArray());	
+		loop(populateArray());
 	}
 	
 	public static int[] populateArray() {
@@ -13,8 +13,8 @@ public class IntegerArray3 {
 	
 	public static void loop(int arr[]) {
 		int count = 0;
-		for (int i = 0; i < arr.length; i++) {
-			if (arr[i]==7) {
+		for (int element : arr) {
+			if (element==7) {
 				count++;
 			}
 		}

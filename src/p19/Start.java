@@ -9,8 +9,8 @@ public class Start {
 		list [0] = new Ogawa();
 		list [1] = new Sato();
 		
-		for (int i = 0; i < list.length; i++) {
-			list[i].eat();
+		for (Human element : list) {
+			element.eat();
 		}
 		
 		System.out.println();

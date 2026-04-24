@@ -4,12 +4,10 @@ public class Mobile extends TV {
 	private String telNo;
 
 	public Mobile() {
-		super();
 		telNo = "";
 	}
 
 	public Mobile(String telNo) {
-		super();
 		this.telNo = telNo;
 	}
 

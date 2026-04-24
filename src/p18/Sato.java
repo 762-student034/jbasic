@@ -13,6 +13,7 @@ public class Sato extends Human {
 		System.out.println();
 	}
 	
+	@Override
 	public void eat() {
 //		super.eat();
 		System.out.println("優雅のわたくしはパスタをいただきました。");

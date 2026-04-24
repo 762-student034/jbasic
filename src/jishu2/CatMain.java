@@ -14,7 +14,7 @@ public class CatMain {
 		System.out.println("猫の名前は"+coffee.getName()+"。");
 		System.out.println("猫の柄は"+coffee.getBreed()+"。");
 		System.out.println("猫の年齢は"+coffee.getAge()+"。");
-		System.out.println("猫がお気に入り食べ物はは"+coffee.getFavFood()+"。");		
+		System.out.println("猫がお気に入り食べ物はは"+coffee.getFavFood()+"。");
 		
 		coffee.monkuWoIu();
 	}

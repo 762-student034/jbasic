@@ -17,7 +17,7 @@ public class UserAction2 {
 		int age = scan.nextInt();
 		
 		user.setName(name);
-		user.setAge(age);	
+		user.setAge(age);
 		
 		System.out.println("---");
 		System.out.println("会員を登録しました");

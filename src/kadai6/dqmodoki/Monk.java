@@ -2,11 +2,10 @@ package kadai6.dqmodoki;
 
 public class Monk extends Character implements Attackable, Healable {
 public Monk() {
-	super();
 }
 public Monk(String name) {
 	super(name);
-}	
+}
 
 @Override
 public void info() {

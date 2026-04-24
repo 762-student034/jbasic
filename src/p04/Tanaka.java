@@ -7,7 +7,6 @@ public class Tanaka extends Human {
 	private String company;
 
 	public Tanaka() {
-		super();
 		bucho = "";
 		company = "";
 	}
@@ -34,6 +33,7 @@ public class Tanaka extends Human {
 		return company;
 	}
 
+	@Override
 	public void introduce() {
 		System.out.println("名前は" + getName());
 		System.out.println("年齢は" + getAge());
@@ -45,10 +45,10 @@ public class Tanaka extends Human {
 
 
 
-//class Yamada extends Tanaka implements yamada {	
+//class Yamada extends Tanaka implements yamada {
 //	@Override
 //	public void introduce(){
 //		System.out.println("山田は田中ではない。");
 //	}
-//	
+//
 //}

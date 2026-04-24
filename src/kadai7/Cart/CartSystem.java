@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class CartSystem {
 	// 商品情報保存リスト（フィールド）
-	public static List<Item> cart = new ArrayList<Item>();
+	public static List<Item> cart = new ArrayList<>();
 
 	//スキャナークラス（フィールド）
 	public static Scanner sc = new Scanner(System.in);
@@ -14,6 +14,4 @@ public class CartSystem {
 	public static void main(String[] args) {
 		ItemMenu.menu(cart, sc);
 	}
-
-
 }

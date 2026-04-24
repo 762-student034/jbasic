@@ -19,7 +19,7 @@ public class CheckString1 {
 		
 		if(input.equals("himitu")) {
 			System.out.println(text[0]+text[1]);
-		} 
+		}
 		else {
 			System.out.println(text[0]+text[2]);
 		}

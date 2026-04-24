@@ -21,7 +21,7 @@ public class Logic {
 	}
 
 	public static void Attack(Character[] ptList) { //攻撃
-		for (Character c : ptList) { 
+		for (Character c : ptList) {
 			c.attack(); 			//攻撃できる人は攻撃
 		}
 

@@ -10,9 +10,9 @@ public class Start {
 				new Mario()
 		};
 
-		for (int i = 0; i < list.length; i++) {
-			list[i].pushA();
-			list[i].pushB();
+		for (Controller element : list) {
+			element.pushA();
+			element.pushB();
 			System.out.println();
 		}
 		for (Controller c : list) {

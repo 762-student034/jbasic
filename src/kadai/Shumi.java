@@ -14,8 +14,8 @@ public class Shumi {
 
 	public void introduce() {
 		System.out.println("こんにちは" + name + "です。\n私の趣味は、");
-		for (int i = 0; i < hobbies.length; i++) {
-			System.out.println("・"+hobbies[i]);
+		for (String element : hobbies) {
+			System.out.println("・"+element);
 		}
 		System.out.println("です。");
 	}

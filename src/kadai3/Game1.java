@@ -12,7 +12,7 @@ public class Game1 {
 
 //		System.out.println("デバッグ用: " + answer);
 		Scanner scan = new Scanner(System.in);
-		int times = gameLogic(answer, scan, 0); 
+		int times = gameLogic(answer, scan, 0);
 
 		System.out.println(times + "回で当たりました！");
 		scan.close();

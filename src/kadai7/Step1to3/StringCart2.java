@@ -6,8 +6,7 @@ import java.util.Scanner;
 
 public class StringCart2 {
 	public static void main(String[] args) {
-		// 文字列を保持できるリストの作成
-		Scanner sc = new Scanner(System.in);
+		new Scanner(System.in);
 		
 		List<String> eList = new ArrayList<>();
 		

@@ -1,9 +1,9 @@
 package jishu2;
 
 interface cat {
-	public void sleep();
+	void sleep();
 
-	public void makeSound();
+	void makeSound();
 }
 
 class coffeeCat implements cat {

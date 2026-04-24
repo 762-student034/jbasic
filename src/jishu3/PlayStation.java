@@ -4,7 +4,6 @@ public class PlayStation extends GameConsole{
 	private String modelNum;
 	
 	public PlayStation() {
-		super();
 		setName("Unkown");
 		setReleaseYear(0);
 		setCompany("Unknown");
@@ -15,7 +14,7 @@ public class PlayStation extends GameConsole{
 	
 	public PlayStation(String name, int releaseYear, String Company, String architecture, boolean network, String variant) {
 		super(name, releaseYear, Company, architecture, network);
-		this.modelNum = variant;		
+		this.modelNum = variant;
 	}
 	
 	public void setVar(String var) {

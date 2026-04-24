@@ -2,7 +2,6 @@ package kadai6.dqmodoki;
 
 public class Healer extends Character implements Healable{
 	public Healer() {
-		super();	
 		}
 	
 	public Healer(String name) {

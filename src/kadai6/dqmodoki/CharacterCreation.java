@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class CharacterCreation {
 	
 	public static Character[] create(Character[] ptList, Scanner scan) {
-		System.out.println("===パーティーを作成します===");		
+		System.out.println("===パーティーを作成します===");
 		int selection;
 		String name;
 		for (int i = 0; i<ptList.length; i++) {

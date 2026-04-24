@@ -21,15 +21,15 @@ public class CheckInteger4 {
 		if (inputInt > 0 || inputInt % 2 == 1) {
 			System.out.println(text[0] + text[2]);
 
-		} 
+		}
 		
 		else if (inputInt > 0 || inputInt % 2 == 0) {
 			System.out.println(text[0] + text[3]);
-		} 
+		}
 		
 		else if (inputInt < 0 || inputInt % 2 == 1) {
 			System.out.println(text[1] + text[2]);
-		} 
+		}
 		
 		else if (inputInt < 0 || inputInt % 2 == 0)
 

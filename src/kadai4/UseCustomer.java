@@ -19,10 +19,10 @@ public class UseCustomer {
 			while (true) {
 				try {
 					id = scan.nextInt();
-					break; 
+					break;
 				} catch (Exception e) {
 					System.out.println("整数を入力してください。");
-					scan.nextInt(); 
+					scan.nextInt();
 				}
 			}
 
@@ -41,7 +41,7 @@ public class UseCustomer {
 			if (id == -1) {
 				customer.setData(name);
 			} else {
-				customer.setData(id, name); 
+				customer.setData(id, name);
 			}
 			customerList[i] = customer;
 		}

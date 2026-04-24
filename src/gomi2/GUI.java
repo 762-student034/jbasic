@@ -4,13 +4,8 @@ import java.awt.BorderLayout;
 import java.awt.Dimension;
 
 import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
 
 class GUI extends JFrame {
-
-    private JPanel panel;
-    private JLabel label;
 
     public static void main(String[] args) {
         new GUI();

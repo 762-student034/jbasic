@@ -12,7 +12,6 @@ public class Book extends Item {
 	}
 
 	public Book() {
-		super();
 		author = "Unknown";
 	}
 
@@ -21,6 +20,7 @@ public class Book extends Item {
 		this.author = author;
 	}
 	
+	@Override
 	public void showInfo() {
 		System.out.println("商品名: "+getName());
 		System.out.println("価格: "+getPrice()+"円");

@@ -10,10 +10,12 @@ public class ValidateInput {
 	        try {
 	            int value = Integer.parseInt(input);
 	            
-	            switch(value) {
-	            case 1, 2, 3, 9 : return value;
-	            default: System.out.println("無効な入力です。");            
-	            }
+	            switch (value) {
+				case 1, 2, 3, 9 -> {
+					return value;
+				}
+				default -> System.out.println("無効な入力です。");
+				}
 	        } catch (NumberFormatException e) {
 	            System.out.println("数字を入力してください。");
 	        }

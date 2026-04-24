@@ -8,10 +8,10 @@ public class Start2 {
 		list[0] = new Kose();
 		list[1] = new Hirai();
 		
-		for (int i = 0; i < list.length; i++) {
-			list[i].work();
-			list[i].tax();
-			list[i].education();
+		for (Japan element : list) {
+			element.work();
+			element.tax();
+			element.education();
 			System.out.println();
 		}
 		

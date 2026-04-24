@@ -1,9 +1,9 @@
 package gomi;
 
 interface cat {
-	public void sleep();
+	void sleep();
 
-	public void makeSound();
+	void makeSound();
 }
 
 class coffeeCat implements cat {
@@ -24,6 +24,7 @@ class sugarCat implements cat{
 		System.out.println("にゃーーー");
 	}
 	
+	@Override
 	public void makeSound() {
 		System.out.println("ウロロロ");
 	}

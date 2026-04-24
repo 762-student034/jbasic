@@ -2,7 +2,6 @@ package kadai6.dqmodoki;
 
 public class Warrior extends Character implements Attackable{
 	public Warrior() {
-		super();
 	}
 	
 	public Warrior(String name) {

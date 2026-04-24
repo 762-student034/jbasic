@@ -10,7 +10,7 @@ public class UseCustomer2 {
 
         Customer[] list = new Customer[3];
         for (int i = 0; i < list.length; i++) {
-            list[i] = new Customer(); 
+            list[i] = new Customer();
         }
         
         for (int i = 0; i < list.length; i++) {

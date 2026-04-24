@@ -19,19 +19,10 @@ public class CheckString2 {
 		String text[] = { "赤です。", "緑です", "青です。", "他の色を入力してください。" };
 
 		switch (input) {
-
-		case "red":
-			System.out.println(text[0]);
-			break;
-		case "green":
-			System.out.println(text[1]);
-			break;
-		case "blue":
-			System.out.println(text[2]);
-			break;
-		default:
-			System.out.println(text[3]);
-			break;
+		case "red" -> System.out.println(text[0]);
+		case "green" -> System.out.println(text[1]);
+		case "blue" -> System.out.println(text[2]);
+		default -> System.out.println(text[3]);
 		}
 
 	}

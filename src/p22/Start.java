@@ -7,7 +7,7 @@ public class Start {
 
 //		p22.s01.Oya o = new p22.s01.Oya();
 		Oya o = new Oya();
-		o.method();		
+		o.method();
 		
 //		final int data = 10;
 ////		data = 30;

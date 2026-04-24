@@ -3,7 +3,7 @@ package p01;
 public class Sample03 {
 
 	public static void main(String[] args) {
-		String name = "エルトン";	
+		String name = "エルトン";
 		int age = 29;
 		
 		

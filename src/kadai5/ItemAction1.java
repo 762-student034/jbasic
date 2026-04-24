@@ -7,7 +7,7 @@ public class ItemAction1 {
 		// Itemクラスのオブジェクトを生成し変数item1に代入する
 		Item item1 = new Item();
 		
-		// セッターを利用して情報（絵本/1000円）をセットする	
+		// セッターを利用して情報（絵本/1000円）をセットする
 		item1.setName("絵本");
 		item1.setPrice(1000);
 		

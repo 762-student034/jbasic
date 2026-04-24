@@ -18,6 +18,7 @@ public class Ogawa extends Human {
 
 	}
 	
+	@Override
 	public void eat(){
 //		super.eat();
 		System.out.println("うどんを食べました。");
