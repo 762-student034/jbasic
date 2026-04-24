@@ -1,4 +1,4 @@
-package kadai7;
+package kadai7.Cart;
 
 public class Book extends Item{
 	private String author;

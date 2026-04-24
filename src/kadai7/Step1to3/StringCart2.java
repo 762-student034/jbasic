@@ -1,4 +1,4 @@
-package kadai7;
+package kadai7.Step1to3;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package kadai7;
+package kadai7.Cart;
 
 public class Item {
 	private String name;
@@ -34,7 +34,7 @@ public class Item {
 	}
 	
 	public String getInfo() {
-		String result = getName()+"/"+getPrice();
+		String result = getName()+"/"+getPrice()+"円";
 		return result;
 	}
 	
