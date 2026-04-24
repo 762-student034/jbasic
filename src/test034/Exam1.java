@@ -13,6 +13,7 @@ public class Exam1 {
 		int age = sc.nextInt();
 		
 		System.out.println(name+"さんの10年後は"+(age+10)+"歳です。");
+		sc.close();
 	}
 
 }

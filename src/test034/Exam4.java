@@ -6,15 +6,12 @@ public class Exam4 {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		
-		
+
 		System.out.println("年齢を入力してください。");
 		int input = verifyRange(sc);
-		System.out.println(input+"歳で登録しました");
+		System.out.println(input + "歳で登録しました");
 	}
-	
 
-	
 	public static int verifyRange(Scanner scan) {
 		while (true) {
 			String input = scan.nextLine();
