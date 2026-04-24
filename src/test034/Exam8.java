@@ -1,9 +1,9 @@
-package kadai;
+package test034;
 
 import java.util.Random;
 import java.util.Scanner;
 
-public class CheckRandom {
+public class Exam8 {
 
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
@@ -32,12 +32,12 @@ public class CheckRandom {
 		int cpuSelection = rand.nextInt(3) + 1;
 		int selection = Integer.parseInt(a);
 
-		String[] statusString = { "あなたの負け", "あなたの勝ち", "引き分けでした。" };
+		String[] statusString = { "君の負けです。", "君の勝ちです。", "引き分けです。" };
 		String[] hands = { "", "グー", "パー", "チョキ" };
 
-		System.out.println("あなたは: " + hands[selection]+"!");
+		System.out.println("あなたの手: " + hands[selection]);
 		System.out.println(ascii[selection]);
-		System.out.println("コンピュータは: " + hands[cpuSelection]+"!");
+		System.out.println("CPUの手: " + hands[cpuSelection]);
 		System.out.println(ascii[cpuSelection]);
 
 		switch (selection - cpuSelection) {
@@ -62,9 +62,7 @@ public class CheckRandom {
 
 		while (true) {
 			if (mode == 1) {
-				System.out.println("1: グー、2: パー、 3: チョキから選択してください。");
-				System.out.println("じゃん、けん、、、：");
-
+				System.out.println("選択してください。1: グー、2: パー、 3: チョキ");
 			} else {
 				System.out.println("選択してください。1: はい、 2: いいえ");
 			}
