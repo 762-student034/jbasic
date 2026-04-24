@@ -48,10 +48,12 @@ public class Exam9 {
 	}
 
 	public static void showInfo(HashMap<String, String> map) {
-		System.out.println("名前         電話番号\n---------------------------");
-		for (String i : map.keySet()) {
-			System.out.println(i + "            " + map.get(i));
-		}
+	    System.out.printf("%-10s %-15s%n", "名前", "電話番号");  //名前の長さを問わず等幅に出力
+	    System.out.println("-------------------------------");
+
+	    for (String name : map.keySet()) {
+	        System.out.printf("%-10s %-15s%n", name, map.get(name));
+	    }
 	}
 
 	public static HashMap<String, String> deleteInfo(HashMap<String, String> map, Scanner sc) {
